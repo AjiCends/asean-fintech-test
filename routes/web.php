@@ -23,8 +23,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/home',[BerandaController::class,'index'])->name('beranda');
-Route::prefix('product')->name('poduct.')->group(function () {
+
+Route::prefix('beranda')->name('beranda.')->group(function () {
+    Route::get('/',[BerandaController::class,'index'])->name('beranda');
+});
+
+Route::prefix('product')->name('product.')->group(function () {
     Route::get('/',[ProductController::class,'all'])->name('all');
     Route::get('/paginate',[ProductController::class,'paginate'])->name('paginate');
     Route::get('/order-by/{column}/{ordered}',[ProductController::class,'orderBy'])->name('orderBy');
@@ -38,3 +42,11 @@ Route::prefix('category')->name('category.')->group(function () {
 Route::prefix('product-detail')->name('product_detail.')->group(function () {
     Route::get('/',[ProductDetailController::class,'all'])->name('all');
 });
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
