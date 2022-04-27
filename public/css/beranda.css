@@ -1,0 +1,99 @@
+.game-verse{
+    width: 100%;
+    height: 10rem;
+    background-image: url("../storage/images/background-2.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.img-play{
+    width: 100px;
+    height: 100px;
+}
+
+.frame-3{
+    background-image: url("../storage/images/background-3.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.frame-3 .frame-item{
+    padding: 5%;
+}
+
+.frame-3 .frame-item p{
+    line-height: 35px;
+    text-align: justify;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.frame-4 h2{
+    font-family: 'Aclonica';
+    font-size: 48px;
+    color: #5D5FEF;
+    text-shadow: 0px 1px 15px rgba(108, 204, 228, 0.49);
+}
+
+.frame-4 p{
+    max-width: 950px;
+    line-height: 35px;
+}
+
+.game-card{
+    width: 417px;
+    height: 417px;
+    cursor: pointer;
+    transition: all .5s cubic-bezier(.8,.5,.2,1.4);
+    overflow: hidden;
+}
+
+.game-card .title{
+    background: rgba(119, 110, 110, 0.69);
+    backdrop-filter: blur(30px);
+    color: white;
+    bottom: 0px;
+    transition: all .7s;
+}
+
+.game-card .descriptions {
+    width: 100%;
+    height: 0%;
+    background: rgba(0, 0, 0, 0.69);
+    backdrop-filter: blur(10px);
+    transition: all .7s;
+    bottom: 0;
+}
+
+.game-card:hover .descriptions{
+    height: 100%;
+    transition: all .7s ;
+    /* clip-path: circle(75%); */
+}
+
+.game-card:hover .title{
+    display: none;
+    transition: all .7s;
+}
+
+@media only screen and (max-width: 650px) {
+
+    .frame-4 h2{
+        font-size: 28px;
+    }
+
+    .game-verse{
+        height: 7rem;
+    }
+
+    .game-card{
+        height: 280px;
+    }
+}
+
+@media only screen and (max-width: 390px) {
+    .game-verse{
+        height: 5rem;
+    }
+}

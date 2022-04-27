@@ -1,0 +1,126 @@
+/* body */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body{
+    font-family: 'Montserrat';
+}
+
+.logo{
+    width: 173px;
+    height: 46px;
+}
+
+.cs-bg-dark{
+    background: black;
+}
+
+.cs-navbar-color{
+    background: rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(40px);
+    /* height: 100%; */
+}
+
+.navbar{
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-top: -5px;
+    margin-bottom: -98px;
+}
+
+.navbar-nav{
+    margin-left: 2.5rem;
+}
+
+.nav-item{
+    margin-left: 0.6rem;
+    margin-right: 0.6rem;
+}
+
+.navbar a{
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.btn-login{
+    width: 158px;
+    height: 41px;
+    color: white;
+    background: #5D5FEF;
+    box-shadow: 0px 0px 4px 4px rgba(11, 206, 255, 0.3);
+    border-radius: 30px;
+}
+
+.cs-btn-lg{
+    width: 287px;
+    height: 68px;
+    background: #5D5FEF;
+    box-shadow: 0px 0px 4px 4px rgba(11, 206, 255, 0.3);
+    border-radius: 30px;
+    color: white;
+    font-weight: 700;
+}
+
+@media only screen and (max-width: 1260px) {
+    .navbar{
+        margin-bottom: -70px;
+    }
+
+    .navbar a{
+        font-size: 14px;
+    }
+
+    .navbar-collapse{
+        margin-top: 1.5rem;
+    }
+
+    .btn-login{
+        width: 98px;
+        height: 30px;
+        color: white;
+        background: #5D5FEF;
+        box-shadow: 0px 0px 4px 4px rgba(11, 206, 255, 0.3);
+        border-radius: 30px;
+    }
+
+    .logo{
+        width: 120px;
+        height: 32px;
+    }
+
+    .frame-3 .logo{
+        margin-bottom: 1.6rem;
+    }
+}
+
+@media only screen and (max-width: 990px) {
+    .navbar{
+        margin-bottom: -50px;
+    }
+
+    .nav-item{
+        margin-top: 1rem;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .login-navbar{
+        margin-top: 50px;
+        padding-left: 2.5rem; 
+    }
+}
+
+@media only screen and (max-width: 630px) {
+    .navbar{
+        margin-bottom: -40px;
+    }
+}
+
+@media only screen and (max-width: 390px) {
+    .navbar{
+        margin-bottom: -20px;
+    }
+}
