@@ -32,8 +32,17 @@
                 </li>
             </ul>
             <div class="login-navbar ms-auto">
-                <a href="#" class="nav-item">REGISTER</a>
-                <button class="nav-item btn-login">LOGIN</button>
+                @if (Auth::check())
+                    <form action="{{ route('logout') }}" method="POST">
+                        @csrf
+                        <button class="nav-item btn-login" type="submit">LOGOUT</button>
+                    </form>
+                @else
+                    <a href="#" class="nav-item">REGISTER</a>
+                    <a href="{{ route('login') }}">
+                        <button class="nav-item btn-login">LOGIN</button>
+                    </a>
+                @endif
             </div>
         </div>
     </div>

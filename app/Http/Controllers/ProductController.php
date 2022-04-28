@@ -16,8 +16,8 @@ class ProductController extends Controller
 
     public function paginate()
     {
-        $products = Product::paginate(2);
-        return response($products);
+        $products = Product::paginate(4);
+        return $products;
     }
 
     public function orderBy($param,$ordered)
@@ -30,7 +30,7 @@ class ProductController extends Controller
             return null;
         }
 
-        return response($products);
+        return $products;
     }
 
     public function category()
@@ -41,7 +41,7 @@ class ProductController extends Controller
                         ->select('p.*','c.name as category')
                         ->get();
 
-        return response($products);
+        return $products;
     }
 }
 

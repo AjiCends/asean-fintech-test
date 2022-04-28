@@ -64,102 +64,11 @@
             </div>
         </div>
         <div class="d-flex flex-wrap justify-content-evenly mt-5">
-            <button class="btn cs-btn-lg mx-3 my-3">Adventure</button>
-            <button class="btn cs-btn-lg mx-3 my-3">Arcade</button>
-            <button class="btn cs-btn-lg mx-3 my-3">Race</button>
-            <button class="btn cs-btn-lg mx-3 my-3">Open World</button>
-            <button class="btn cs-btn-lg mx-3 my-3">RPG</button>
-            <button class="btn cs-btn-lg mx-3 my-3">MMORPG</button>
-            <button class="btn cs-btn-lg mx-3 my-3">FPS</button>
-            <button class="btn cs-btn-lg mx-3 my-3">MULTIPLAYER</button>
+            @foreach ($categories as $category)
+                <button class="btn cs-btn-lg mx-3 my-3">{{ $category->name }}</button>    
+            @endforeach
         </div>
     </div>
 
-    <div class="container-fluid px-5 frame-5 mt-5">
-        <div class="d-flex flex-wrap justify-content-evenly">
-            <div class="game-card my-3 position-relative">
-                <img class="img-fluid" src="{{ asset('storage/images/game-card/image-57.png') }}"
-                    alt="game-image">
-                <div class="descriptions p-3 position-absolute">
-                    <p class="text-white">Enter the world of Masketeers where brave heroes empowered by mysterious masks take a stand against
-                        the inner demons of society. Soon you will be able to adorn yourself with exclusive NFT Costumes
-                        that can empower your Masketeers as they unleash their attacks on the manifestations of negativity.
-                    </p>
-                </div>
-                <div class="title p-3 w-100 position-absolute">
-                    <h4 class="fw-bold text-white">Claw Stars</h4>
-                </div>
-            </div>
-
-            <div class="game-card my-3 position-relative">
-                <img class="img-fluid" src="{{ asset('storage/images/game-card/image-58.png') }}"
-                    alt="game-image">
-                <div class="descriptions p-3 position-absolute">
-                    <p class="text-white">Enter the world of Masketeers where brave heroes empowered by mysterious masks take a stand against
-                        the inner demons of society. Soon you will be able to adorn yourself with exclusive NFT Costumes
-                        that can empower your Masketeers as they unleash their attacks on the manifestations of negativity.
-                    </p>
-                </div>
-                <div class="title p-3 w-100 position-absolute">
-                    <h4 class="fw-bold text-white">The Last</h4>
-                </div>
-            </div>
-
-            <div class="game-card my-3 position-relative">
-                <img class="img-fluid" src="{{ asset('storage/images/game-card/image-59.png') }}"
-                    alt="game-image">
-                <div class="descriptions p-3 position-absolute">
-                    <p class="text-white">Enter the world of Masketeers where brave heroes empowered by mysterious masks take a stand against
-                        the inner demons of society. Soon you will be able to adorn yourself with exclusive NFT Costumes
-                        that can empower your Masketeers as they unleash their attacks on the manifestations of negativity.
-                    </p>
-                </div>
-                <div class="title p-3 w-100 position-absolute">
-                    <h4 class="fw-bold text-white">Moon Land</h4>
-                </div>
-            </div>
-
-            <div class="game-card my-3 position-relative">
-                <img class="img-fluid" src="{{ asset('storage/images/game-card/image-57.png') }}"
-                    alt="game-image">
-                <div class="descriptions p-3 position-absolute">
-                    <p class="text-white">Enter the world of Masketeers where brave heroes empowered by mysterious masks take a stand against
-                        the inner demons of society. Soon you will be able to adorn yourself with exclusive NFT Costumes
-                        that can empower your Masketeers as they unleash their attacks on the manifestations of negativity.
-                    </p>
-                </div>
-                <div class="title p-3 w-100 position-absolute">
-                    <h4 class="fw-bold text-white">Claw Stars</h4>
-                </div>
-            </div>
-
-            <div class="game-card my-3 position-relative">
-                <img class="img-fluid" src="{{ asset('storage/images/game-card/image-58.png') }}"
-                    alt="game-image">
-                <div class="descriptions p-3 position-absolute">
-                    <p class="text-white">Enter the world of Masketeers where brave heroes empowered by mysterious masks take a stand against
-                        the inner demons of society. Soon you will be able to adorn yourself with exclusive NFT Costumes
-                        that can empower your Masketeers as they unleash their attacks on the manifestations of negativity.
-                    </p>
-                </div>
-                <div class="title p-3 w-100 position-absolute">
-                    <h4 class="fw-bold text-white">The Last</h4>
-                </div>
-            </div>
-
-            <div class="game-card my-3 position-relative">
-                <img class="img-fluid" src="{{ asset('storage/images/game-card/image-59.png') }}"
-                    alt="game-image">
-                <div class="descriptions p-3 position-absolute">
-                    <p class="text-white">Enter the world of Masketeers where brave heroes empowered by mysterious masks take a stand against
-                        the inner demons of society. Soon you will be able to adorn yourself with exclusive NFT Costumes
-                        that can empower your Masketeers as they unleash their attacks on the manifestations of negativity.
-                    </p>
-                </div>
-                <div class="title p-3 w-100 position-absolute">
-                    <h4 class="fw-bold text-white">Moon Land</h4>
-                </div>
-            </div>
-        </div>
-    </div>
+    @livewire('product.product-display-livewire')
 @endsection

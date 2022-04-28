@@ -18,6 +18,7 @@
         @yield('title')
     </title>
 
+    @livewireStyles
 
 </head>
 
@@ -33,6 +34,7 @@
     </script>
 
     <script src="https://kit.fontawesome.com/f2e6e4c6cc.js" crossorigin="anonymous"></script>
+    @livewireScripts
 </body>
 
 </html>

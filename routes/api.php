@@ -22,7 +22,22 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::middleware(EnsureTokenValid::class)->group(function () {
+Route::prefix('product')->name('product.')->group(function () {
+    Route::get('/',[ProductController::class,'all'])->name('all');
+    Route::get('/paginate',[ProductController::class,'paginate'])->name('paginate');
+    Route::get('/order-by/{column}/{ordered}',[ProductController::class,'orderBy'])->name('orderBy');
+    Route::get('/with-category',[ProductController::class,'category'])->name('category');
+});
+
+Route::prefix('category')->name('category.')->group(function () {
+    Route::get('/',[CategoryController::class,'all'])->name('all');
+});
+
+Route::prefix('product-detail')->name('product_detail.')->group(function () {
+    Route::get('/',[ProductDetailController::class,'all'])->name('all');
+});
+
+Route::prefix('private')->middleware(EnsureTokenValid::class)->group(function () {
     Route::prefix('product')->name('poduct.')->group(function () {
         Route::get('/',[ProductController::class,'all'])->name('all');
         Route::get('/paginate',[ProductController::class,'paginate'])->name('paginate');
